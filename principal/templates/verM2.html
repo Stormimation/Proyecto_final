@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1>Bienvenido Señorita {{nombre}}</h1>
+    <div class="container">
+        <div class="row">
+            <table class="table">
+                <tr>
+                    <td>ID</td>
+                    <td>Nombre</td>
+                    <td>Apellido</td>
+                    <td>Especialidad</td>
+                    <td colspan="2">Opciones</td>
+                </tr>
+                {% for m in medicos %}
+                        <tr>
+                                <td>{{m.idMedico}}</td>
+                                <td>{{m.nombreMedico}}</td>
+                                <td>{{m.apellidoMedico}}</td>
+                                <td>{{m.especialidad}}</td>
+                                <td><a href="eliminarM/{{m.idMedico}}">Borrar</a></td>
+                                <td><a href="modificarM/{{m.idMedico}}">Modificar</a></td>
+                        </tr>
+                   {% endfor %}
+                   <button onclick="location.href = 'formM'" type="button" class="btn btn-primary btn-lg btn-block">Registrar Medico</button>
+    </div>
+<div class="container-fluid">
+        <button onclick="location.href = '/'" type="btn btn-danger" class="margin-bottom: 10px; border-radius: 10px !important">Cerrar Sesion</button>   
+</div>
+                 
+</body>
+</html>

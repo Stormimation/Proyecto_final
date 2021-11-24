@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hora Agendadas</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1>Horas Agendadas</h1>
+    <div class="container">
+        <div class="row">
+            <table class="table">
+                <tr>
+                    <td>ID</td>
+                    <td>Dia</td>
+                    <td>Mes</td>
+                    <td>Hora</td>
+                    <td>Medico</td>
+                    <td colspan="2">Opciones</td>
+                </tr>
+                {% for h in horas %}
+                        <tr>
+                                <td>{{h.idHora}}</td>
+                                <td>{{h.dia.dia}}</td>
+                                <td>{{h.mes.mes}}</td>
+                                <td>{{h.hora.hora}}</td>
+                                <td>{{h.medico.apellidoMedico}}</td>
+                                <td><a href="eliminarH/{{h.idHora}}">Borrar</a></td>
+                                <td><a href="modificarH/{{h.idHora}}">Modificar</a></td>
+                        </tr>
+                   {% endfor %}
+                   <button onclick="location.href = 'verM'" type="button" class="btn btn-primary btn-lg btn-block">Ver Medicos</button>
+    </div>             
+</body>
+</html>

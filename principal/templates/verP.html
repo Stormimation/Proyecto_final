@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1>Bienvenido Doctor {{nombre}}</h1>
+    <div class="container">
+        <div class="row">
+            <table class="table">
+                <tr>
+                    <td>Rut</td>
+                    <td>Nombre</td>
+                    <td>Edad</td>
+                    <td>Email</td>
+                </tr>
+                {% for p in pacientes %}
+                        <tr>
+                                <td>{{p.rut}}</td>
+                                <td>{{p.nombre}}</td>
+                                <td>{{p.edad}}</td>
+                                <td>{{p.email}}</td>
+                        </tr>
+                   {% endfor %}
+    </div>             
+</body>
+</html>
