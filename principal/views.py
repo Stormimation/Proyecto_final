@@ -88,7 +88,7 @@ def guardarPaciente(request):
 
     datos={'usuariosp': usuariosp}
 
-    return render(request, 'registro.html', datos)   
+    return render(request, 'loginC.html', datos)   
      
 
 def formmedico(request):

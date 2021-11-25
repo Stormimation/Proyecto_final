@@ -1,17 +1,25 @@
 <!doctype html>
 <html lang="en">
   <head>
+    {% load static %}
     <title>Agendar</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+      .footer{position: fixed; left:0; bottom:0; width: 100%; text-align: center; background-color: lightseagreen; color:mediumorchid;}
+    </style>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-  <body>
+  <body style="background-color:rgb(214, 242, 247)">
+    <nav class="navbar navbar-expand-xl bg-info"> 
+      <img src="{% static 'principal/img/logo.png' %}" alt="logo" style="width: 100px;" class="d-inline-block align-top">
+      <h1 class="container text-center">Agendar Hora</h1>
+    </nav>
     <div class ="container">
-        <h1>Agendar Hora</h1>
+        <h1></h1>
         <form method="POST" action="guardarAgendar">
             {% csrf_token %}
           <div class= "form-group">
@@ -58,6 +66,7 @@
         <a href="verM" class="btn btn-primary">Ver Medicos</a>  
         <a href="verH" class="btn btn-primary">Ver Horas Agendadas</a>
     </div>
+    <div class="footer"><h1>Cruz Morada</h1></div>
 
       
     <!-- Optional JavaScript -->

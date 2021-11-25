@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {% load static %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <style>
+    .footer{position: fixed; left:0; bottom:0; width: 100%; text-align: center; background-color: lightseagreen; color:mediumorchid;}
+  </style>
+  <style>
+    span {
+      display: inline-block;
+      width: 70px;
+      height: 70px;
+      margin: 6px;
+      background-color: rgb(212, 237, 245);
+    }
+    .border {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    margin: 6px;
+    }
+  </style>
 </head>
-<body>
-
+<body style="background-color:rgb(214, 242, 247)">
+	<nav class="navbar navbar-expand-xl bg-info"> 
+    <img src="{% static 'principal/img/logo.png' %}" alt="logo" style="width: 100px;" class="d-inline-block align-top">
+		<h1 class="container text-center">-------------Bienvendido al Hospital Cruz Morada-------------</h1>
+	</nav>
+	<h2></h2>
 	<div class="container text-center">
 		<div class="btn-group-vertical w-75">
 			<button  onclick="location.href = '/admin'" type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom: 10px; border-radius: 10px !important">Administrador</button>
@@ -16,6 +39,13 @@
             <button  onclick="location.href = 'loginC'" type="button" class="btn btn-danger btn-lg btn-block" style="margin-bottom: 10px; border-radius: 10px !important">Cliente</button>
 		</div>
 	</div>
+  <div class="container">
+    <h1 class="container text-center">Doctor del Mes y Virus del año</h1>
+  <img src="{% static 'principal/img/doctor.jpg' %}" alt="logo" style="width: 500px;" class="d-inline-block align-top">
+  <img src="{% static 'principal/img/cov.jpg' %}" alt="logo" style="width: 500px;" class="d-inline-block align-top">
+  </div>
+  
+  <div class="footer"><h1>Su cuidado esta en buenas manos</h1></div>
 
 </body>
 </html>
